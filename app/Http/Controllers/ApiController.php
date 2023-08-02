@@ -12,7 +12,7 @@ class ApiController extends Controller
     public function indexResponse(Request $request, $query)
     {
         $page = $request->get('page', 1);
-        $itemsPerPage = $request->get('itemsPerPage', 15);
+        $itemsPerPage = $request->get('pageSize', 30);
         $search = $request->get('search');
         $order = $request->get('order', []);
         $filter = $request->get('filter', []);
